@@ -20,8 +20,7 @@
         };
     </script>
     <!-- qrcode cdn -->
-    <script
-     src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.1/qrcode.js" integrity="sha512-hAz8pxm1kva4chZWPXQhGehvvlIj1Loka653sQXoYHNj4sgSukoR3ZKyHEOT7kFGVW17wUqD9CbKeviIJ2XFKQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     <style> 
         #spinner{
@@ -84,7 +83,9 @@
         </div>
 
         <!-- generated QR code  -->
-        <div class="max-w-5xl m-auto flex flex-col text-center align-center justify-center mt-20">
+        <div 
+        id="generated"
+        class="max-w-5xl m-auto flex flex-col text-center align-center justify-center mt-20">
 
             <!-- spinner -->
             <div id="spinner" role="status">
@@ -104,7 +105,7 @@
                   />
                 </svg>
                 <span class="sr-only">Loading...</span>
-              </div>
+            </div>
 
             <!-- qrcode output -->
             <div id="qrcode" class="m-auto">
